@@ -5,37 +5,38 @@ html, body {
     position: relative;
     font-family: 'NexonLv2Gothic';
 }
+/* Layout */
+:root {
+    --mColor : rgb(5, 29, 73);
+}
 main {
     max-width: 500px;
     margin: 0 auto;
 }
 .section {
     width: 100%;
-    overflow: hidden;
     padding: 0 20px;
+    overflow: hidden;
 }
 .container {
-    position: relative;
-    transform: translateY(60px);
     width: 100%;
 }
 .row {
     margin: 70px 0;
 }
 
-
 /* Header */
 .header_wrap {
     width: 100%;
     height: 60px;
-    background-color: #051d49;
+    background-color: var(--mColor);
 
     position: fixed;
     top: 0; left: 0;
     z-index: 1000;
 }
 .header_wrap nav {
-    padding: 0 15px;
+    padding: 0 20px;
 }
 .init_header {
     width: 100%;
@@ -84,9 +85,8 @@ main {
 }
 
 /* Main section */
-
 .main_section {
-    position: relative;
+    position: fixed;
     height: 100vh;
     padding: 0;
 }
@@ -94,11 +94,55 @@ main {
     height: 100vh;
     left: -50px;
 }
+.main_desc {
+    position: absolute;
+    top: 55%;
+    z-index: 100;
+    color: #fff;
+    padding: 0 20px;
+}
+.main_desc h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+.main_desc p {
+    font-size: .8rem;
+    line-height: 1.6;
+}
+.main_desc p strong {
+    font-size: 1rem;
+}
+.sroll {
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+    z-index: 100;
+    color: #fff;
+    font-size: .9em;
+    font-weight: 200;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: bounce 2s linear infinite;
+}
 
-.img_1 {
-    width: 100%;
-    height: 310px;
-    background-color: rgba(246, 172, 27, 0.74);
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+}
+
+/* Container */
+.container {
+    position: absolute;
+    top: 100vh;
+    background-color: #fff;
 }
 
 /* Intro */
@@ -113,9 +157,10 @@ main {
     font-weight: 700;
     margin-bottom: 40px;
     line-height: 1.4;
+    letter-spacing: -3px;
 }
 .intro_cont figure {
-    width: 60%;
+    width: 75%;
     border-radius: 5px;
 }
 .intro_cont figure img {
@@ -153,9 +198,49 @@ main {
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
+.goods_section li {
+    width: 30%;
+}
+.goods_item {
+    display: flex;
+    flex-direction: column;
+}
+.goods_item img {
+    border-radius: 5px;
+}
+.goods_item span {
+    width: 100%;
+    max-height: 36px;
+
+    margin-top: 10px;
+    font-size: .9em;
+    line-height: 1.25;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.goods_btn {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    width: 30%;
+    padding: 6px 10px;
+    border: 1px solid #dbdbdb;
+    margin: 0 auto;
+    transition: .3s;
+}
+.goods_btn:hover {
+    background-color: var(--mColor);
+    color: #fff;
+    transition: .3s;
+}
+
 
 /* SNS */
 .sns_list {
@@ -197,11 +282,45 @@ main {
     border-radius: 50%;
     background-color: #dbdbdb;
 
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.location_cont:first-child .location_img {
+    background-image: url(../image/location_1.jpg);
+}
+.location_cont:last-child .location_img {
+    background-image: url(../image/location_2.jpg);
 }
 .location_cont p {
     font-size: .9em;
     font-weight: 300;
     text-align: center;
     word-break: keep-all;
+}
+
+/* Footer */
+/* .foot_contents {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.foot_cont1 {
+    width: 80%;
+    height: 150px;
+    background-color: #999;
+} */
+.foot_contents {
+    width: 80%;
+}
+.footer_logo {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.foot_cont3 ul {
+    display: flex;
+    justify-content: space-between;
 }
