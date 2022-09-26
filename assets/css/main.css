@@ -89,6 +89,7 @@ main {
     position: fixed;
     height: 100vh;
     padding: 0;
+    overflow: hidden;
 }
 .main_section video {
     height: 100vh;
