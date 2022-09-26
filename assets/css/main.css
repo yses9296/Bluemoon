@@ -1,6 +1,6 @@
 @import url('https://webfontworld.github.io/NexonLv2Gothic/NexonLv2Gothic.css');
 html, body {
-    max-width: 500px;  /* temparary */
+    max-width: 780px;  /* temparary */
     margin: 0 auto;
     position: relative;
     font-family: 'NexonLv2Gothic';
@@ -10,7 +10,7 @@ html, body {
     --mColor : rgb(5, 29, 73);
 }
 main {
-    max-width: 500px;
+    width: 100%;
     margin: 0 auto;
 }
 .section {
@@ -83,6 +83,23 @@ main {
     height: 100%;
     display: none;
 }
+.side_menu {
+    height: 100vh;
+    position: absolute;
+    right: -400px;
+    background-color: var(--mColor);
+    transition: all .3s linear 0s;
+}
+.side_menu.active {
+    right: 0;
+}
+.side_menu li a {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 20px 10px;
+    font-size: 4vw;
+}
+
 
 /* Main section */
 .main_section {
@@ -118,7 +135,7 @@ main {
 .sroll {
     position: absolute;
     left: 20px;
-    bottom: 10%;
+    bottom: 13%;
     z-index: 100;
     color: #fff;
     font-size: .9em;
@@ -187,6 +204,15 @@ main {
 .intro_cont:last-child figure {
     width: 100%;
 }
+
+.intro_img {
+    opacity: 0;
+    transition: .7s;
+}
+.intro_img.active {
+    opacity: 1;
+    transition: .7s;
+}
 /* Goods */
 .section_title {
     font-size: 20px;
@@ -247,27 +273,56 @@ main {
 .sns_list {
     position: relative;
 }
-.sns_section ul {
-    width: 1500px;
-    overflow-y: scroll;
+.grid-view {
+    width: 100%;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    /* grid-template-columns: repeat(3, 1fr) */
 
-    background-color: #555;
 }
-.sns_section ul li {
-    display: inline-block;
-    width: 140px;
-    height: 140px;
-    margin-right: 20px;
+.grid-view li a {
+    max-width: 100%;
+    height: 230px;
+    /* min-height: 100px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+
+    filter:brightness(.8);
+    transition: .2s;
+}
+.grid-view li a:hover {
+    filter:brightness(1);
+    transition: .2s;
 }
 
-.sns_section ul li:last-child {
-    margin-right: 0;
+.grid-view li:nth-child(1) a {
+    background-image: url(../image/sns_1.jpg);
 }
+.grid-view li:nth-child(2) a {
+    background-image: url(../image/sns_2.jpg);
+}
+.grid-view li:nth-child(3) a {
+    background-image: url(../image/sns_3.jpg);
+}
+.grid-view li:nth-child(4) a {
+    background-image: url(../image/sns_4.jpg);
+}
+.grid-view li:nth-child(5) a {
+    background-image: url(../image/sns_5.jpg);
+}
+.grid-view li:nth-child(6) a {
+    background-image: url(../image/sns_6.jpg);
+}
+
 
 /* Location */
 .locaiont_contents {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 .location_cont {
     width: 300px;
@@ -367,4 +422,10 @@ main {
     margin-top: 50px;
     font-size: 0.7em;
     text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    .grid-view li a {
+        height: 180px;
+    }
 }
