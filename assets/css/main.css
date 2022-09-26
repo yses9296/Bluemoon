@@ -1,0 +1,207 @@
+@import url('https://webfontworld.github.io/NexonLv2Gothic/NexonLv2Gothic.css');
+html, body {
+    max-width: 500px;  /* temparary */
+    margin: 0 auto;
+    position: relative;
+    font-family: 'NexonLv2Gothic';
+}
+main {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.section {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 20px;
+}
+.container {
+    position: relative;
+    transform: translateY(60px);
+    width: 100%;
+}
+.row {
+    margin: 70px 0;
+}
+
+
+/* Header */
+.header_wrap {
+    width: 100%;
+    height: 60px;
+    background-color: #051d49;
+
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+}
+.header_wrap nav {
+    padding: 0 15px;
+}
+.init_header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo_wrap {
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+.logo_wrap a {
+    width: 100%;
+    height: 100%;
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+.logo_wrap img {
+    height: 100%;
+    margin-right: 10px;
+    max-width: 50px;
+}
+.member_wrap {
+    height: 100%;
+    text-align: right;
+}
+.member_wrap a {
+    width: 36px;
+    height: 36px;
+}
+.member_wrap a.search_icon {
+    margin-right: 10px;
+}
+.scroll_header {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/* Main section */
+
+.main_section {
+    position: relative;
+    height: 100vh;
+    padding: 0;
+}
+.main_section video {
+    height: 100vh;
+    left: -50px;
+}
+
+.img_1 {
+    width: 100%;
+    height: 310px;
+    background-color: rgba(246, 172, 27, 0.74);
+}
+
+/* Intro */
+
+.intro_cont {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 90px;    
+}
+.intro_cont .cont_title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    line-height: 1.4;
+}
+.intro_cont figure {
+    width: 60%;
+    border-radius: 5px;
+}
+.intro_cont figure img {
+    border-radius: 15px;
+}
+.intro_cont:nth-child(2n-1) {
+    text-align: left;
+    align-items: flex-start;
+}
+.intro_cont:nth-child(2n) {
+    text-align: right;
+    align-items: flex-end;
+}
+.intro_cont:last-child {
+    text-align: center;
+    align-items: center;
+}
+.intro_cont:last-child .cont_title {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+.intro_cont:last-child figure {
+    width: 100%;
+}
+/* Goods */
+.section_title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.goods_section ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between
+}
+
+/* SNS */
+.sns_list {
+    position: relative;
+}
+.sns_section ul {
+    width: 1500px;
+    overflow-y: scroll;
+
+    background-color: #555;
+}
+.sns_section ul li {
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    margin-right: 20px;
+}
+
+.sns_section ul li:last-child {
+    margin-right: 0;
+}
+
+/* Location */
+.locaiont_contents {
+    display: flex;
+    flex-direction: row;
+}
+.location_cont {
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+}
+.location_cont .location_img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #dbdbdb;
+
+    margin-bottom: 10px;
+}
+.location_cont p {
+    font-size: .9em;
+    font-weight: 300;
+    text-align: center;
+    word-break: keep-all;
+}

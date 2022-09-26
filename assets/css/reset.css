@@ -1,0 +1,29 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, li, ol {
+    list-style: none;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+figure, img {
+    display: block;
+    width: 100%;
+}
+
+.ir_pm {
+    display: block;
+    content: '';
+    font-size: 0;
+    text-indent: -99999em;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
