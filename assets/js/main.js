@@ -19,9 +19,6 @@ document.addEventListener("DOMContentLoaded", function(){
         var scrollTop =  this.scrollY ;
 
         intro_cont.forEach((el, idx) => {
-            console.log('window offset: '+ scrollTop);
-            console.log('intro_cont offset: '+idx+ "-"+ el.offsetTop);
-
             if(scrollTop >= el.offsetTop+500){
                 intro_img[idx].classList.add('active');
             }

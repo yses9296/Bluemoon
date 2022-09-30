@@ -1,6 +1,6 @@
 @import url('https://webfontworld.github.io/NexonLv2Gothic/NexonLv2Gothic.css');
 html, body {
-    max-width: 780px;  /* temparary */
+    max-width: 768px;
     margin: 0 auto;
     position: relative;
     font-family: 'NexonLv2Gothic';
