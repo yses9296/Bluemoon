@@ -110,7 +110,7 @@ main {
 }
 .main_section video {
     height: 100vh;
-    left: -50px;
+    /* left: -50px; */
 }
 .main_desc {
     position: absolute;
